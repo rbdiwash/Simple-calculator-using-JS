@@ -7,29 +7,37 @@
     <title>Calculator</title>
 </head>
 <body>
-
-    
-<div class="container">
+<div class="column" style="display: flex;"> 
     
     <div class="calculator">
+        
         <h2 class="heading">Calculator</h2>
-
-            <input type="text" name="screen" id="screen" onkeypress="">
+      
+        
+            <input type="text" name="screen" id="screen">
+            <div class="input">
+                <p class=input-value></p>
+            </div>
+    
+            <div class="output">
+                <p class="output-value"></p>
+    
+            </div>
             <table>
 
                 <tr>
-                    <td> <button>AC</button> </td>
-                    <td> <button>DEL</button> </td>
-                    <td> <button>%</button> </td>
-                    <td> <button>/</button> </td>
+                    <td> <button class="AC">AC</button> </td>
+                    <td> <button class="DEL">DEL</button> </td>
+                    <td> <button class="percentage">%</button> </td>
+                    <td> <button class="divide">/</button></td>
 
                 </tr> 
 
                 <tr>
-                    <td> <button>7</button> </td>
+                    <td> <button class="num">7</button> </td>
                     <td> <button>8</button> </td>
                     <td> <button>9</button> </td>
-                    <td> <button>*</button> </td>
+                    <td> <button class="multiply">*</button> </td>
 
                 </tr> 
                  
@@ -37,14 +45,14 @@
                     <td> <button>4</button> </td>
                     <td> <button>5</button> </td>
                     <td> <button>6</button> </td>
-                    <td> <button>-</button> </td>
+                    <td> <button class="subtract">-</button> </td>
 
                 </tr>  
                 <tr>
                     <td> <button>1</button> </td>
                     <td> <button>2</button> </td>
                     <td> <button>3</button> </td>
-                    <td> <button>+</button> </td>
+                    <td> <button class="add">+</button> </td>
 
                 </tr>  
                 <tr>
@@ -57,10 +65,17 @@
             </table>
 
 
-        </div>
+    </div>
 
-</div>
 
+    <div class="history">
+            <h3>History</h3>
+            <ol id="tenHistories" reversed>
+
+
+            </ol>
+    </div>
+</div>  
 
 </body>
 <script src="index.js"></script>

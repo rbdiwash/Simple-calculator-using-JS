@@ -1,6 +1,8 @@
 let screen = document.getElementById('screen');
-buttons = document.querySelectorAll('button');
+let buttons = document.querySelectorAll('button');
 let screenValue = ' ';
+let historyArr= [];
+let tenHistories = document.querySelector('#tenHistories');
 // let equalButton= document.querySelector('.equals');
 for (item of buttons){
     item.addEventListener('click',(e)=>{
@@ -18,7 +20,25 @@ for (item of buttons){
         }
 
         else if(buttonText == '='){
-             screen.value= eval(screen.value);
+            historyArr.push({
+                expr: screen.value,
+                result: eval(screen.value)
+
+            });
+            // console.log(historyArr)
+            
+            tenHistories.innerHTML= ""
+            historyArr.map(item =>{
+                let listitem = document.createElement("li");
+                listitem.innerText= item.expr + "=" + item.result;
+                tenHistories.appendChild(listitem)
+
+            })
+
+
+
+            screen.value= eval(screen.value);
+
         }
 
         else{
@@ -28,14 +48,12 @@ for (item of buttons){
 
     })
 
+
 }
 
-// screen.addEventListener("onkeyup",(e) =>{
-//     console.log(e);
-//     if (e.keyCode==13){
-//        e.preventDefault();
-//         screen.value= eval(screen.value);
-//     }
+
+
+
 
 
 

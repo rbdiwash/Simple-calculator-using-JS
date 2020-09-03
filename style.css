@@ -1,63 +1,136 @@
 body   {
-    font-family:'Open Sans',sans-serif ;
+    font-family:'Open Sans' ;
     text-align: center;
-    background-color: black;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 
-
-.container{
-
-    width: 1000px;
-    height: 550px;
-    background-image: url(images/bg.jpg);
-    border-radius: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    color:black;
-    margin-top:20px;
-
+.column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
 }
+
 
 .calculator{
-    width: 320px;
-    height: 430px;
+    width: 400px;
+    height: 580px;
     background-color: whitesmoke;
-    border-radius: 30px;
-    margin: 150px auto;
-   
+    border-radius:6px ;
+    border: 1px solid black;
 
 }
 
+.history{
+    width: 300px;
+    height: 580px;
+    background-color: rgb(214, 202, 202);
+    border: 1px ;
+    border-radius: 6px;
+              
 
+}
 table{
     margin: auto;
 }
 
 input{
     font-size:20px;
-    height: 40px;
+    height: 60px;
+    width: 300px;
     border-radius:5px;
     margin-bottom: 10px;
+    align-content: right;
 }
 button{
     font-size: 20px;
-    background-color: aliceblue;
+    background-color: whitesmoke;
     width: 50px;
     height: 50px;
     row-gap:10px;
     border-radius: 6px;
     border:0px;
-    
+    margin: 15px;
+       
 }
 
 .equals{
     background-color: orange;
     color: white;
-    width:100%;
+    width:80%; 
+    border-radius: 50px;
 }
+
+.AC{
+    background-color: orange;
+    color: white;
+    border-radius: 50%;
+    
+}
+.DEL{
+    background-color: tomato;
+    color: white;
+    border-radius: 50%;
+}
+/* .multiply{
+    background-color: rgb(74, 180, 53);
+    color: white;
+    border-radius: 50%;
+
+}
+
+.add{
+    background-color: rgb(96, 36, 238);
+    color: white;
+    border-radius: 50%;
+
+}
+.subtract{
+    background-color: rgb(219, 48, 196);
+    color: white;
+    border-radius: 50%;
+
+}
+.divide{
+    background-color:rgb(214, 190, 55);
+    color: white;
+    border-radius: 50%;
+
+}
+.percentage{
+    background-color: rgb(81, 91, 235);
+    color: white;
+    border-radius: 50%;
+
+} */
+
+
+.equals:hover{
+    background-color: orange;
+    border-radius: 50px;
+}
+
+
 
 button:hover{
     background-color: rgba(224, 116, 116, 0.9);
     border-radius: 50px;
+    
 
+}
+
+#tenHistories{
+    height: 500px;
+    list-style: none;
+    text-align: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+}
+
+#tenHistories li{
+    padding: 5px;
 }
